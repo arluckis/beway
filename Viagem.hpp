@@ -1,57 +1,33 @@
 #ifndef VIAGEM_HPP
-#include "Cidade.hpp"
+#define VIAGEM_HPP
 
-// Classe para representar uma Viagem
+#include <iostream>
+#include <vector>
+#include "cidade.hpp"        // Supondo que exista um arquivo cidade.hpp com a definição de Cidade
+#include "transporte.hpp"    // Supondo que exista um arquivo transporte.hpp com a definição de Transporte
+#include "passageiro.hpp"    // Supondo que exista um arquivo passageiro.hpp com a definição de Passageiro
+#include "estado_viagem.hpp" // Supondo que exista um arquivo estado_viagem.hpp com a definição de EstadoViagem
+
 class Viagem {
 private:
-    std::vector<const Passageiro*> passageiros;
     const Cidade& origem;
     const Cidade& destino;
     const Transporte& transporte;
+    std::vector<const Passageiro*> passageiros;
     EstadoViagem estado;
 
 public:
-    Viagem(const Cidade& origem, const Cidade& destino, const Transporte& transporte)
-        : origem(origem), destino(destino), transporte(transporte), estado(EmAndamento) {}
+    Viagem(const Cidade& origem, const Cidade& destino, const Transporte& transporte);
 
-    const Cidade& getOrigem() const {
-        return origem;
-    }
+    const Cidade& getOrigem() const;
+    const Cidade& getDestino() const;
+    const Transporte& getTransporte() const;
+    const std::vector<const Passageiro*>& getPassageiros() const;
+    EstadoViagem getEstado() const;
 
-    const Cidade& getDestino() const {
-        return destino;
-    }
-
-    const Transporte& getTransporte() const {
-        return transporte;
-    }
-
-    const std::vector<const Passageiro*>& getPassageiros() const {
-        return passageiros;
-    }
-
-    EstadoViagem getEstado() const {
-        return estado;
-    }
-
-    void registrarPartida() {
-        std::cout << "Viagem iniciada de " << origem.getNome() << " para " << destino.getNome() << " com transporte " << transporte.getNome() << std::endl;
-        // Implementar lógica para registrar a partida da viagem
-    }
-
-    void registrarChegada() {
-        std::cout << "Viagem de " << origem.getNome() << " para " << destino.getNome() << " com transporte " << transporte.getNome() << " concluída." << std::endl;
-        // Implementar lógica para registrar a chegada da viagem
-    }
-
-    void avancarTempo(double horas) {
-        // Implementar lógica para avançar o tempo da viagem
-    }
+    void registrarPartida();
+    void registrarChegada();
+    void avancarTempo(double horas);
 };
 
-
-
-
-
-
-#endif // VIAGEM.HPP
+#endif // VIAGEM_HPP
