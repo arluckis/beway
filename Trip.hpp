@@ -14,9 +14,10 @@ using namespace std;         // Isenta o uso do std durante o seguinte programa
 class Trip { //Definindo a classe Trip(Viagem)
 private:
   Transport* transportOfTrip; 
-  city* origin;
-  city* destiny;
-  trip* next;
+  std::vector <Passenger*> passengers;
+  City* origin;
+  City* destiny;
+  Trip* next;
   int timeInTraffic;
   bool inProgress;
 
