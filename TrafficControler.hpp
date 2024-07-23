@@ -29,6 +29,19 @@ public:
   void avanceHour(int hours);
   void relateState();
 
+  // função para relatar tudo que foi cadastrado no sistema (Cidades, Rotas, Transportes, passageiros e viagens em andamento)
+  void relateState() {
+    std::cout << "Current System State" << std::endl; // Título da relação de estado
+    std::cout << "Cadastred Cities" << std::endl;
+    for (auto city : cities) {
+      std::cout << "* " << city->getName() << std::endl;
+    }
+    std::cout << "Cadastred Routes" << std::endl;
+    std::cout << "Cadastred Transports" << std::endl;
+    std::cout << "Cadastred Passengers" << std::endl;
+
+    
+  }
 }
 
 #endif // TRAFFICCONTROLER_HPP
