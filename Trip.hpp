@@ -4,7 +4,7 @@
 #include <iostream>          // Inicializador do programa em C++
 #include <vector>            // Incluir a biblioteca vetor, para poder utilizar vetores durante a programação
 #include <cmath>             // Para poder utilizar a função ceil()
-#include <string>            // Incluir a biblioteca string,
+#include <string>            // Incluir a biblioteca string
 #include "city.hpp"          // Pegar informações referente a um arquivo chamado de city.hpp que possui definido a variável City(Cidade)
 #include "transporte.hpp"    // Pegar informações referente a um arquivo chamado de transport.hpp que possui definido a variável Transport(Transporte)
 #include "passageiro.hpp"    // Pegar informações referente a um arquivo chamado de passenger.hpp que possui definido a variável Passenger(Passageiro)
