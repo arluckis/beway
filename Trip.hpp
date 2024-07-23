@@ -23,6 +23,7 @@ private:
 Public:
   // Definindo o construtor para Trip: variável transport, city origin e city destiny devem ser informadas e demais variáveis tem que ser inicializa
   Trip(Transport* transport, City* origin_, City* destinyCity) : transportOfTrip(transport), origin(originCity), destiny(destinyCity), next(nullptr), timeInTraffic(0), inProgress(false) {}
+
   //Calcular o tempo estimado com os dados da distância percorrida, velocidade média e tempo de descando do transporte
   double distance = calculateDistance(origin, destinyCity);
   double numberOfRests = ceil(distance/ distanceTimeOfRest);
