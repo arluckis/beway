@@ -33,3 +33,16 @@ void showMenu(){
     std::cout << "|12. Sair do programa                               |" << std::endl;
     createLine();
 }
+
+bool astronautAlreadyRegistered(string CPF, vector<Astronaut> &astronauts)
+{
+    for (int i = 0; i < astronauts.size(); i++)
+    {
+        string cpfAux = astronauts[i]->getCPF();
+        if (CPF == cpfAux)
+        {
+            return true;
+        }
+    }
+    return false;
+}
