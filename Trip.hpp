@@ -19,8 +19,8 @@ private:
   bool inProgress;
 
 Public:
-  // Definindo o construtor para Trip
-  Trip(Transport* transport, City* origin_, City* destinyCity)
+  // Definindo o construtor para Trip: variável transport, city origin e city destiny devem ser informadas e demais variáveis tem que ser inicializa
+  Trip(Transport* transport, City* origin_, City* destinyCity) : transportOfTrip(transport), origin(originCity), destiny(destinyCity), next(nullptr), timeInTraffic(0), inProgress(false) {}
 
 
   // Metodo utilizado para dar início a uma viagem
@@ -43,4 +43,4 @@ Public:
 
 };
 
-#endif // VIAGEM_HPP
+#endif // TRIP_HPP
