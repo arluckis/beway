@@ -24,9 +24,11 @@ public:
   void cadastreCity(std::string name);
   void cadastreRoute(std::string nameOrigin, std::string nameDestiny, char type, int distance);
   void cadastreTransport(std::string name, char type, int capacity, int speed, int distance_between_rests, int timeOfRest, std::string currentLocation);
-  void cadastrePassenger(std::string name, std::string currentLocation);
+  void cadastrePassenger(std::string name, std::string passengerCurrentCity);
   void beginTrip(std::string nameTransport, std::vector<std::string> nomesPassengers, std::string nameOrigin, std::string nameDestiny);
   void avanceHour(int hours);
   void relateState();
 
 }
+
+#endif // TRAFFICCONTROLER_HPP
