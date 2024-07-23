@@ -5,9 +5,9 @@
 #include <vector>            // Incluir a biblioteca vetor, para poder utilizar vetores durante a programação
 #include <cmath>             // Para poder utilizar a função ceil()
 #include <string>            // Incluir a biblioteca string
-#include "city.hpp"          // Pegar informações referente a um arquivo chamado de city.hpp que possui definido a variável City(Cidade)
-#include "transporte.hpp"    // Pegar informações referente a um arquivo chamado de transport.hpp que possui definido a variável Transport(Transporte)
-#include "passageiro.hpp"    // Pegar informações referente a um arquivo chamado de passenger.hpp que possui definido a variável Passenger(Passageiro)
+#include "../city/city.hpp"          // Pegar informações referente a um arquivo chamado de city.hpp que possui definido a variável City(Cidade)
+//#include "transporte.hpp"    Pegar informações referente a um arquivo chamado de transport.hpp que possui definido a variável Transport(Transporte)
+#include "../passenger/passenger.hpp"    // Pegar informações referente a um arquivo chamado de passenger.hpp que possui definido a variável Passenger(Passageiro)
 
 using namespace std;         // Isenta o uso do std durante o seguinte programa
 
@@ -26,7 +26,7 @@ public:
   Trip(Transport* transport, City* origin_, City* destinyCity) : transportOfTrip(transport), origin(originCity), destiny(destinyCity), next(nullptr), timeInTraffic(0), inProgress(false) {}
 
   //Calcular o tempo estimado com os dados da distância percorrida, velocidade média e tempo de descando do transporte
-  double distance = calculateDistance(origin, destinyCity);
+  /*double distance = calculateDistance(origin, destinyCity);
   double numberOfRests = ceil(distance/ distanceTimeOfRest);
   double averageSpeed = transport->getAverageSpeed();
   double estimatedTime = ((distance / averageSpeed) + (numberOfRests * timeOfRest))
@@ -61,6 +61,6 @@ public:
   bool isInProgress() const {
     return inProgress;
   }
-};
+};*/
 
 #endif // TRIP_HPP

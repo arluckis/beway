@@ -34,11 +34,11 @@ void showMenu(){
     createLine();
 }
 
-bool astronautAlreadyRegistered(string CPF, vector<Astronaut> &astronauts)
+bool astronautAlreadyRegistered(string CPF, vector<Passenger> &passengers)
 {
-    for (int i = 0; i < astronauts.size(); i++)
+    for (int i = 0; i < passengers.size(); i++)
     {
-        string cpfAux = astronauts[i]->getCPF();
+        string cpfAux = passengers[i]->getCPF();
         if (CPF == cpfAux)
         {
             return true;
