@@ -3,6 +3,7 @@
 
 #include <string>
 #include "../city/city.hpp"
+#include "../trip/trip.hpp"
 
 class Passenger{
 private:

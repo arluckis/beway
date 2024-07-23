@@ -5,13 +5,13 @@ using namespace std;
 
 int main()
 {
-    int choice = 0, id = 1, idSearch = 0;
-    string cpf, cityName, ;
+    int choice = 0;
+    string cpf, cityName;
 
     bool keepContinue = true;
     while (keepContinue)
     {
-        displayMenu();
+        showMenu();
         cout << "Selecione a opção desejada: ";
         cin >> choice;
         cout << endl;
