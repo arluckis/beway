@@ -1,4 +1,4 @@
-e#ifndef TRIP_HPP
+#ifndef TRIP_HPP
 #define TRIP_HPP
 
 #include <iostream>          // Inicializador do programa em C++
