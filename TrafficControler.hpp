@@ -37,6 +37,9 @@ public:
       std::cout << "* " << city->getName() << std::endl;
     }
     std::cout << "Cadastred Routes" << std::endl;
+    for (auto route : routes) {
+      std::cout << "- De " << route->getOrigin() << " para " << route->getDestiny() 
+    }
     std::cout << "Cadastred Transports" << std::endl;
     std::cout << "Cadastred Passengers" << std::endl;
 
