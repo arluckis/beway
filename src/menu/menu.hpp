@@ -5,5 +5,6 @@
 
 void showMenu();
 void createLine();
+bool astronautAlreadyRegistered(string CPF, vector<Passenger> &passengers);
 
 #endif
