@@ -6,7 +6,7 @@ void createLine(){
 
 void showMenu(){
     createLine();
-    std::cout << "|                        BEWAY                      |" << std::endl;
+    std::cout << "|                         BWAY                      |" << std::endl;
     createLine();
     std::cout << "|1. Cadastrar passageiro no sistema                 |" << std::endl;
     createLine();
