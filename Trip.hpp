@@ -9,7 +9,7 @@
 // #include "estado_viagem.hpp" // Verificar se o estado da viagem virá de um outro arquivo ou neste!!!!!
 using namespace std;         // Isenta o uso do std durante o seguinte programa
 
-class Trip{ //Definindo a classe Trip(Viagem)
+class Trip { //Definindo a classe Trip(Viagem)
 private:
   Transport* transportOfTrip; 
   city* origin;
@@ -20,10 +20,27 @@ private:
 
 Public:
   // Definindo o construtor para Trip
-  Trip(Transport* transport, City* origin_)
-
-}
+  Trip(Transport* transport, City* origin_, City* destinyCity)
 
 
+  // Metodo utilizado para dar início a uma viagem
+  void beginTrip() {
+  
+  }
+
+  void advanceHour() {
+    
+  }
+
+  void showStatus() {
+    
+  }
+
+  // Retorna a variável inProgress que irá definir se a viagem está em progresso ou não
+  bool isInProgress() const {
+    return inProgress;
+  }
+
+};
 
 #endif // VIAGEM_HPP
