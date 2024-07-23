@@ -45,7 +45,7 @@ public:
       endTrip();    //Se o tempo em viagem for maior que o tempo estimado da viagem, a viagem tem que ser finalizada (necessário definir o tempo estimado)
     }
   }
-  // Mostra todos os detalhes da viagem (Cidade de origem, Cidade de destino)
+  // Mostra todos os detalhes da viagem (Cidade de origem, Cidade de destino, Tempo decorrido, passageiros na viagem e estado da viagem)
   void showStatus() {
     std::cout << "Trip details: " << std::endl;
     std::cout << "Origin City: " << origin->getName() << std::endl;
