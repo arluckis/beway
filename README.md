@@ -8,7 +8,18 @@ Esse é o projeto final para a disciplina de LP1 (Linguagem de programação 1) 
 
 Aqui estarão listadas as principais funcionalidades do nosso código:
 
-
+- Explicar funcionalidade 1
+- Explicar funcionalidade 2
+- Explicar funcionalidade 3
+- Explicar funcionalidade 4
+- Explicar funcionalidade 5
+- Explicar funcionalidade 6
+- Explicar funcionalidade 7
+- Explicar funcionalidade 8
+- Explicar funcionalidade 9
+- Explicar funcionalidade 10
+- Explicar funcionalidade 11
+- Explicar funcionalidade 12
         
 
 ### Implementações adicionais
