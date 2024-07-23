@@ -23,15 +23,20 @@ Public:
   Trip(Transport* transport, City* origin_, City* destinyCity) : transportOfTrip(transport), origin(originCity), destiny(destinyCity), next(nullptr), timeInTraffic(0), inProgress(false) {}
 
 
-  // Metodo utilizado para dar início a uma viagem
+  // Método utilizado para dar início a uma viagem
   void beginTrip() {
-  
+    inProgress = true;
+    timeInTraffic = 0;  //Verificar necessidade, pois já se inicia em 0
   }
 
+  // Método utilizado para adiantar a hora
   void advanceHour() {
-    
+    TimeInTraffic++;
+    if (timeInTraffic >= estimatedTime) {
+      endTrip();    //Se o tempo em viagem for maior que o tempo estimado da viagem, a viagem tem que ser finalizada (necessário definir o tempo estimado)
+    }
   }
-
+  // Mostra todos os detalhes da viagem
   void showStatus() {
     
   }
