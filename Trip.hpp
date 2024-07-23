@@ -6,7 +6,7 @@
 #include "city.hpp"          // Pegar informações referente a um arquivo chamado de city.hpp que possui definido a variável City(Cidade)
 #include "transporte.hpp"    // Pegar informações referente a um arquivo chamado de transport.hpp que possui definido a variável Transport(Transporte)
 #include "passageiro.hpp"    // Pegar informações referente a um arquivo chamado de passenger.hpp que possui definido a variável Passenger(Passageiro)
-// #include "estado_viagem.hpp" // Verificar se o estado da viagem virá de um outro arquivo ou neste!!!!!
+
 using namespace std;         // Isenta o uso do std durante o seguinte programa
 
 class Trip { //Definindo a classe Trip(Viagem)
@@ -36,16 +36,19 @@ Public:
       endTrip();    //Se o tempo em viagem for maior que o tempo estimado da viagem, a viagem tem que ser finalizada (necessário definir o tempo estimado)
     }
   }
-  // Mostra todos os detalhes da viagem
+  // Mostra todos os detalhes da viagem (Cidade de origem, Cidade de destino)
   void showStatus() {
-    
+    std::cout << "Trip details: " << std::endl;
+    std::cout << "Origin City: " << origin->getName() << std::endl;
+    std::cout << "Destiny City: " << destiny->getName() << std::endl;
+    std::cout << "Time in traffic: " << timeInTraffic << "hours" << std::endl;
+    for (auto)
   }
 
   // Retorna a variável inProgress que irá definir se a viagem está em progresso ou não
   bool isInProgress() const {
     return inProgress;
   }
-
 };
 
 #endif // TRIP_HPP
