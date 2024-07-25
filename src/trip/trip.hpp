@@ -5,8 +5,8 @@
 #include <vector>            // Incluir a biblioteca vetor, para poder utilizar vetores durante a programação
 #include <cmath>             // Para poder utilizar a função ceil()
 #include <string>            // Incluir a biblioteca string
-#include "../city/city.hpp"          // Pegar informações referente a um arquivo chamado de city.hpp que possui definido a variável City(Cidade)
-//#include "transporte.hpp"    Pegar informações referente a um arquivo chamado de transport.hpp que possui definido a variável Transport(Transporte)
+#include "../city/city.hpp"              // Pegar informações referente a um arquivo chamado de city.hpp que possui definido a variável City(Cidade)
+#include "../transport/transport.hpp"    //Pegar informações referente a um arquivo chamado de transport.hpp que possui definido a variável Transport(Transporte)
 #include "../passenger/passenger.hpp"    // Pegar informações referente a um arquivo chamado de passenger.hpp que possui definido a variável Passenger(Passageiro)
 
 using namespace std;         // Isenta o uso do std durante o seguinte programa
@@ -42,7 +42,7 @@ public:
   void advanceHour() {
     TimeInTraffic++;
     if (timeInTraffic >= estimatedTime) {
-      endTrip();    //Se o tempo em viagem for maior que o tempo estimado da viagem, a viagem tem que ser finalizada (necessário definir o tempo estimado)
+      endTrip();    //Se o tempo em viagem for maior que o tempo estimado da viagem, a viagem tem que ser finalizada
     }
   }
   // Mostra todos os detalhes da viagem (Cidade de origem, Cidade de destino, Tempo decorrido, passageiros na viagem e estado da viagem)
@@ -51,10 +51,11 @@ public:
     std::cout << "Origin City: " << origin->getName() << std::endl;
     std::cout << "Destiny City: " << destiny->getName() << std::endl;
     std::cout << "Time in traffic: " << timeInTraffic << "hours" << std::endl;
-    for passenger {
-      std::cout << 
+    std::cout << "Status: " << (inProgress? "In Progress" : "Not In Progress") << std::endl;
+    std::cout << "Passenger: " << std::endl;
+    for (Passenger* passenger : passengers) {
+      std::cout << " - " << passenger->getName() << std::endl;
       }
-    std::cout << 
   }
 
   // Retorna a variável inProgress que irá definir se a viagem está em progresso ou não
