@@ -1,5 +1,5 @@
-#ifndef TRIP_HPP
-#define TRIP_HPP
+#ifndef trip_hpp
+#define trip_hpp
 
 #include <iostream>          // Inicializador do programa em C++
 #include <vector>            // Incluir a biblioteca vetor, para poder utilizar vetores durante a programação
@@ -64,4 +64,4 @@ public:
   }
 };*/
 
-#endif // TRIP_HPP
+#endif // trip_hpp
