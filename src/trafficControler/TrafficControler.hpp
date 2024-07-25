@@ -1,5 +1,5 @@
-#ifndef TRAFFICCONTROLER_HPP
-#define TRAFFICCONTROLER_HPP
+#ifndef trafficcontroler_hpp
+#define trafficcontroler_hpp
 
 #include <iostream>          // Inicializador do programa em C++
 #include <vector>            // Incluir a biblioteca vetor, para poder utilizar vetores durante a programação
@@ -47,4 +47,4 @@ public:
   }
 }
 
-#endif // TRAFFICCONTROLER_HPP
+#endif // trafficcontroler_hpp
