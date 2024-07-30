@@ -24,10 +24,6 @@ private:
     return 0.0;
   }
 
-public:
-  // Definindo o construtor para Trip: variável transport, city origin e city destiny devem ser informadas e demais variáveis tem que ser inicializa
-  Trip(Transport* transport, City* origin_, City* destinyCity) : transportOfTrip(transport), origin(originCity), destiny(destinyCity), next(nullptr), timeInTraffic(0), inProgress(false) {}
-
   //Calcular o tempo estimado com os dados da distância percorrida, velocidade média e tempo de descando do transporte
   void calculateEstimatedTime(){
     double distance = calculateDistance(origin, destinyCity);          // Calcula a distância percorrida
@@ -36,6 +32,10 @@ public:
     double averageSpeed = transportOfTrip->getAverageSpeed();          // Pega a velocidade média do transporte de outro arquivo
     double estimatedTime = ((distance / averageSpeed) + (numberOfRests * timeOfRest))       // Tempo estimado
   }
+
+public:
+  // Definindo o construtor para Trip: variável transport, city origin e city destiny devem ser informadas e demais variáveis tem que ser inicializa
+  Trip(Transport* transport, City* origin_, City* destinyCity) : transportOfTrip(transport), origin(originCity), destiny(destinyCity), next(nullptr), timeInTraffic(0), inProgress(false), calculateEstimatedTime() {}
 
   // Método utilizado para dar início a uma viagem
   void beginTrip() {
@@ -52,6 +52,11 @@ public:
       }
     }
   }
+
+// Método utilizado para alterar o estado da viagem para finalizado
+void endTrip() {
+  inProgress = false;
+}
 
   // Mostra todos os detalhes da viagem (Cidade de origem, Cidade de destino, Tempo decorrido, passageiros na viagem e estado da viagem)
   void showStatus() {
