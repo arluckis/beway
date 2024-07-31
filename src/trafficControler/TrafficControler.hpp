@@ -34,7 +34,7 @@ City* findCityByName(const string& name) const{
 }
 
 // Função para procurar uma rota direta ou indireta, caso não encontre retorna "não encontrado"
-Route* findRouteByCities(City* origin, city* destination) const {
+Route* findRouteByCities(City* origin, City* destination) const {
   for (Route* route : routes) {           // Verifica rotas diretas entre a origem e o destino
     if (route->getOrigin() == origin && route->getDestination() == destination) {
       return route;
@@ -91,9 +91,9 @@ Passenger* findPassengerByName(const string& name) const{
 public:
   void cadastreCity(std::string name);
   void cadastreRoute(std::string nameOrigin, std::string nameDestiny, char type, int distance);
-  void cadastreTransport(std::string name, char type, int capacity, int speed, int distance_between_rests, int timeOfRest, std::string currentLocation);
+  void cadastreTransport(std::string name, char type, int capacity, int speed, int distanceBetweenRests, int timeOfRest, std::string currentLocation);
   void cadastrePassenger(std::string name, std::string passengerCurrentCity);
-  void beginTrip(std::string nameTransport, std::vector<std::string> nomesPassengers, std::string nameOrigin, std::string nameDestiny);
+  void beginTrip(std::string nameTransport, std::vector<std::string> namesPassengers, std::string nameOrigin, std::string nameDestiny);
   void avanceHour(int hours);
   void relateState();
 
