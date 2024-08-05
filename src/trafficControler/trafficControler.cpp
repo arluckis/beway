@@ -1,15 +1,7 @@
 #include "trafficControler.hpp"
 
-class TrafficControler {
-private:
-  std::vector <City*> cities;
-  std::vector <Route*> routes;
-  std::vector <Transport*> transports;
-  std::vector <Passenger*> passengers;
-  std::vector <Trip*> trips;
-
 // Função para procurar se o nome da cidade se existe no ponteiro city, caso não encontre retorna "não encontrado"
-City* findCityByName(const string& name) const{
+City* TrafficControler::findCityByName(const string& name) const{
   for (City* city : cities) {
     if (city->getName() == name) {
       return city;
@@ -19,7 +11,7 @@ City* findCityByName(const string& name) const{
 }
 
 // Função para procurar uma rota direta ou indireta, caso não encontre retorna "não encontrado"
-Route* findRouteByCities(City* origin, City* destination) const {
+Route* TrafficControler::findRouteByCities(City* origin, City* destination) const {
   for (Route* route : routes) {           // Verifica rotas diretas entre a origem e o destino
     if (route->getOrigin() == origin && route->getDestination() == destination) {
       return route;
@@ -54,7 +46,7 @@ Route* findRouteByCities(City* origin, City* destination) const {
 }
 
 // Função para procurar se o nome do transporte se existe no ponteiro transport, caso não encontre retorna "não encontrado"
-Transport* findTransportByName(const string& name) const{
+Transport* TrafficControler::findTransportByName(const string& name) const {
   for (Transport* transport : transports) {
     if (transport->getName() == name) {
       return transport;
@@ -64,7 +56,7 @@ Transport* findTransportByName(const string& name) const{
 }
 
 // Função para procurar se o nome do transporte se existe no ponteiro transport, caso não encontre retorna "não encontrado"
-Passenger* findPassengerByName(const string& name) const{
+Passenger* TrafficControler::findPassengerByName(const string& name) const{
   for (Passenger* passenger : passengers) {
     if (passenger->getName() == name) {
       return passenger;
@@ -73,17 +65,8 @@ Passenger* findPassengerByName(const string& name) const{
   return nullptr;
 }
 
-public:
-  void cadastreCity(std::string name);
-  void cadastreRoute(std::string nameOrigin, std::string nameDestiny, char type, int distance);
-  void cadastreTransport(std::string name, char type, int capacity, int speed, int distanceBetweenRests, int timeOfRest, std::string currentLocation);
-  void cadastrePassenger(std::string name, std::string passengerCurrentCity);
-  void beginTrip(std::string nameTransport, std::vector<std::string> namesPassengers, std::string nameOrigin, std::string nameDestiny);
-  void avanceHour(int hours);
-  void relateState();
-
   // função para relatar tudo que foi cadastrado no sistema (Cidades, Rotas, Transportes, passageiros e viagens em andamento)
-  void relateState() {
+  void TrafficControler::relateState() const {
     std::cout << "Current System State" << std::endl; // Título da relação de estado
     
     std::cout << "Cadastred Cities" << std::endl; // Informações sobre a cidade
